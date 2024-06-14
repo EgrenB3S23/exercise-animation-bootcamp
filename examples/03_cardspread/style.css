@@ -1,0 +1,133 @@
+:root {
+	--card-1-color: rgba(234, 52, 38, 1);
+	--card-2-color: rgba(240, 151, 61, 1);
+	--card-3-color: rgba(250, 248, 94, 1);
+	--card-4-color: rgba(137, 249, 97, 1);
+	--card-5-color: rgba(105, 203, 142, 1);
+	--card-6-color: rgba(133, 232, 250, 1);
+	--card-7-color: rgba(107, 119, 244, 1);
+	--card-8-color: rgba(188, 126, 238, 1);
+	--card-9-color: rgba(233, 182, 209, 1);
+
+	--rotZ-1-offset: 10deg;
+	--rotZ-2-offset: calc(0deg - var(--rotZ-1-offset));
+
+	--transform-1-offset: 0.5rem;
+	--transform-2-offset: calc(0rem - var(--transform-1-offset));
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	background: none;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	position: relative;
+}
+
+.card {
+	width: 12rem;
+	height: 17rem;
+	background-color: hotpink;
+	border-radius: 0.75rem;
+
+	position: absolute;
+	transition: all 0.2s ease;
+	transform-origin: bottom center;
+
+	box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.08);
+	/* 
+	border: 1px black solid;
+ */
+}
+
+.card:nth-of-type(n) {
+	top: calc(n * 1rem);
+	top: calc()
+}
+
+.card:nth-of-type(1) {
+	background-color: var(--card-1-color);
+}
+
+.card:nth-of-type(2) {
+	background-color: var(--card-2-color);
+}
+
+.card:nth-of-type(3) {
+	background-color: var(--card-3-color);
+}
+
+.card:nth-of-type(4) {
+	background-color: var(--card-4-color);
+}
+
+.card:nth-of-type(5) {
+	background-color: var(--card-5-color);
+}
+
+.card:nth-of-type(6) {
+	background-color: var(--card-6-color);
+}
+
+.card:nth-of-type(7) {
+	background-color: var(--card-7-color);
+}
+
+.card:nth-of-type(8) {
+	background-color: var(--card-8-color);
+}
+
+.card:nth-of-type(9) {
+	background-color: var(--card-9-color);
+}
+
+section:hover {
+	.card:nth-of-type(1) {
+		transform: translateX(calc(var(--transform-1-offset)*4)) rotateZ(calc(var(--rotZ-1-offset)*4));
+	}
+
+	.card:nth-of-type(2) {
+		transform: translateX(calc(var(--transform-1-offset)*3)) rotateZ(calc(var(--rotZ-1-offset)*3));
+	}
+
+	.card:nth-of-type(3) {
+		transform: translateX(calc(var(--transform-1-offset)*2)) rotateZ(calc(var(--rotZ-1-offset)*2));
+	}
+
+	.card:nth-of-type(4) {
+		transform: translateX(calc(var(--transform-1-offset)*1)) rotateZ(calc(var(--rotZ-1-offset)*1));
+	}
+
+	.card:nth-of-type(5) {
+		transform: translateX(0) rotateZ(0);
+	}
+
+	.card:nth-of-type(6) {
+		transform: translateX(calc(var(--transform-2-offset)*1)) rotateZ(calc(var(--rotZ-2-offset)*1));
+	}
+
+	.card:nth-of-type(7) {
+		transform: translateX(calc(var(--transform-2-offset)*2)) rotateZ(calc(var(--rotZ-2-offset)*2));
+	}
+
+	.card:nth-of-type(8) {
+		transform: translateX(calc(var(--transform-2-offset)*3)) rotateZ(calc(var(--rotZ-2-offset)*3));
+	}
+
+	.card:nth-of-type(9) {
+		transform: translateX(calc(var(--transform-2-offset)*4)) rotateZ(calc(var(--rotZ-2-offset)*4));
+	}
+}

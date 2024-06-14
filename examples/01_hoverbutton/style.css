@@ -1,0 +1,102 @@
+:root {
+  --color-normal: rgba(80, 240, 80, 1);
+  --color-hover: rgba(240, 240, 80, 1);
+  --color-click: rgba(240, 80, 80, 1);
+
+  --button-height: 8rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.btn {
+  background-color: var(--color-normal);
+  color: #eee;
+  padding: 0;
+  margin: auto;
+  width: 20rem;
+  min-height: var(--button-height);
+  line-height: var(--button-height);
+  text-align: center;
+  border-radius: 0.5rem;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 2.5rem;
+  font-weight: 900;
+
+  -webkit-text-stroke: 1px #000;
+
+  transition: 0.2s;
+
+  box-shadow: 0 0 0.4rem #000;
+
+  /* 
+	text-shadow:1px 0px 0px #000, -1px 0px 0px #000,
+				0px 1px 0px #000, 0px -1px 0px #000,
+				1px 1px 0px #000, -1px -1px 0px #000,
+				-1px 1px 0px #000, 1px -1px 0px #000;
+ 	 */
+}
+
+div.hov,
+div.click,
+up.hold {
+  display: none;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--color-hover);
+  box-shadow: 0 0 4.4rem #000;
+  scale: 2;
+
+  div.norm {
+    display: none;
+  }
+
+  div.hov {
+    display: block;
+  }
+}
+
+.btn:active,
+.btn:focus {
+  /*
+	div.norm {
+		display: none;
+	}
+	*/
+  div.hov {
+    display: none;
+  }
+
+  div.click {
+    display: block;
+  }
+
+  background-color: var(--color-click);
+  scale: 3;
+}
+
+.btn:active {
+  scale: 4;
+
+  div.click {
+    display: none;
+  }
+
+  up.hold {
+    display: block;
+  }
+}

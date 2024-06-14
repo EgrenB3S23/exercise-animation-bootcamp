@@ -1,20 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card spread</title>
-    <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Pride Cards</title>
 </head>
+
 <body>
-    <article class="card"></article>
-    <article class="card"></article>
-    <article class="card"></article>
-    <article class="card"></article>
-    <article class="card"></article>
-    <article class="card"></article>
-    <article class="card"></article>
-    <article class="card"></article>
-    <article class="card"></article>
+	<section class="cards">
+		<article class="card"></article>
+		<article class="card"></article>
+		<article class="card"></article>
+		<article class="card"></article>
+		<article class="card"></article>
+		<article class="card"></article>
+		<article class="card"></article>
+		<article class="card"></article>
+		<article class="card"></article>
+	</section>
+
+
+	<!-- applies "right: 2rem" on 1st card, 4rem to 2nd card, and so on.
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const cards = document.querySelectorAll('.cards .card');
+			cards.forEach((card, index) => {
+				card.style.right = `calc(${(index + 1)} * 2rem)`;
+				card.style.top = `calc(${Math.abs(index - 4)} * 0.5rem)`;
+
+			});
+		});
+	</script>
+	-->
 </body>
+
 </html>
