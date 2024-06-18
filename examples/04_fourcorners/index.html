@@ -1,14 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Four corners</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <main>
-        <aside></aside>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Click inside the white square.</h1>
+
+    <main class="board toggle">
+      <aside class="square"></aside>
     </main>
-</body>
+
+    <script>
+      /* 
+      // disable
+      document.querySelector(".toggle").addEventListener("click", (e) => {
+        document.querySelector(".square").classList.remove("animating");
+      });
+      
+			// enable
+      document.querySelector(".toggle").addEventListener("click", (e) => {
+        document.querySelector(".square").classList.add("animating");
+      });
+			*/
+
+      // toggle
+      document.querySelector(".toggle").addEventListener("click", (e) => {
+        document.querySelector(".square").classList.toggle("animating");
+      });
+
+      // disable nav menu on clicking anywhere except nav or .toggle
+      /*
+            document.addEventListener("click", (e) => {
+              const nav = document.querySelector("nav");
+              const toggler = document.querySelector(".toggle");
+              if (!nav.contains(e.target) && !toggler.contains(e.target)) {
+                nav.classList.remove("open");
+              }
+            });
+      			*/
+    </script>
+  </body>
 </html>

@@ -1,41 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Star Wars Crawler</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="stylepasta.css" />
+  </head>
+  <body>
     <main>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Star_Wars_Yellow_Logo.svg" alt="sw logo">
-        
-        <p class="episode">Episode: V</p>
-        
-        <h1>A new hope</h1>
-        
-        <p>It is a period of civil war.
-            Rebel spaceships, striking
-            from a hidden base, have won
-            their first victory against
-            the evil Galactic Empire.</p>
-            
-        <p>During the battle, Rebel
-            spies managed to steal secret
-            plans to the Empire's
-            ultimate weapon, the DEATH
-            STAR, an armored space
-            station with enough power to
-            destroy an entire planet.</p>
-            
-        <p>Pursued by the Empire's
-            sinister agents, Princess
-            Leia races home aboard her
-            starship, custodian of the
-            stolen plans that can save
-            her people and restore
-            freedom to the galaxy.....
-        </p>
+      <div class="wrapper">
+        <div class="scroll-text">
+          <div class="center">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Star_Wars_Yellow_Logo.svg"
+              alt="sw logo"
+            />
+          </div>
+
+          <p class="episode">Episode: V</p>
+
+          <h1>A new hope</h1>
+
+          <p>
+            It is a period of civil war. Rebel spaceships, striking from a hidden base, have won
+            their first victory against the evil Galactic Empire.
+          </p>
+
+          <p>
+            During the battle, Rebel spies managed to steal secret plans to the Empire's ultimate
+            weapon, the DEATH STAR, an armored space station with enough power to destroy an entire
+            planet.
+          </p>
+
+          <p>
+            Pursued by the Empire's sinister agents, Princess Leia races home aboard her starship,
+            custodian of the stolen plans that can save her people and restore freedom to the
+            galaxy.....
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum accusamus hic tempora
+            veniam quas repudiandae! Quam tempore sit voluptatum ea, quasi sed? Nisi suscipit hic
+            voluptas ipsam sapiente quidem et minima saepe inventore recusandae amet, quaerat rem
+            quas temporibus laborum rerum sit magnam nihil sequi distinctio! Soluta doloremque
+            officiis magnam aliquam repellendus laudantium error sed dignissimos, mollitia
+            perspiciatis doloribus quisquam repellat quos harum at iure consequatur, dolorum enim
+            veritatis! Repellendus similique reiciendis esse totam dolor neque, et quis, atque
+            incidunt odit maxime soluta cumque! Cum quod ea, aspernatur, autem minima sit, at
+            perspiciatis porro suscipit numquam saepe molestias amet quia?
+          </p>
+        </div>
+      </div>
     </main>
-</body>
+    <script>
+      // forces scroll-to-top
+      if (history.scrollRestoration) {
+        history.scrollRestoration = "manual";
+      } else {
+        window.onbeforeunload = function () {
+          window.scrollTo(0, 0);
+        };
+      }
+    </script>
+  </body>
 </html>

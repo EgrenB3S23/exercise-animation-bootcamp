@@ -104,11 +104,6 @@ a.menu-item:active {
   border-color: #666;
 }
 
-a.menu-item {
-  animation: slide var(--slide-duration) linear calc(var(--slide-delay) * var(--anim-index))
-    backwards;
-}
-
 a.toggle {
   display: block;
   position: absolute;
@@ -126,8 +121,7 @@ a.toggle {
     opacity: 0;
   }
   100% {
-    opacity: 1;
-    left: 0;
     transform: unset;
+    opacity: 1;
   }
 }
