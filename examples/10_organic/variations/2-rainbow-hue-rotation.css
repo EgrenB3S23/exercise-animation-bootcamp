@@ -1,11 +1,19 @@
 :root {
-	/* --start-pos: rotateX(45deg) rotateY(-30deg) rotateZ(10deg); */
 	--ring-count: 40;
 
 	--r-start: 255;
 	--g-start: 128;
+	--b-start: -127;
+	--o-start: 0.9;
+	--r-end: 128;
+	--g-end: 64;
+	--b-end: 255;
+	--o-end: 0;
+
+	--r-start: 255;
+	--g-start: 128;
 	--b-start: 0;
-	--o-start: 1.25;
+	--o-start: 1.5;
 	--r-end: 255;
 	--g-end: 0;
 	--b-end: 128;
@@ -14,144 +22,57 @@
 	--bg1: #333;
 	--bg2: rgba(96, 64, 192, 1);
 
-	--size-start: 3rem;
-	--size-end: 1600px;
-	--border-start: 0.5rem;
-	--border-end: 3rem;
-	--border-style: solid;
-
-	--outline-start: 0px;
-	--outline-end: 0px;
-	--outline-style: none;
-
-	--shadow-start: 2rem;
-	--shadow-end: 2rem;
-
+	--size-start: 50px;
+	--size-end: 1025px;
+	--border-start: 25px;
+	--border-end: 25px;
 	--delay-start: 0s;
-	--delay-end: 2.5s;
+	--delay-end: 2s;
 
 	--an-name: tumble;
 	--an-duration: 15s;
 	--an-timing: linear;
-	--an-delay: -5s;
+	--an-delay: -2s;
 	--an-iterations: infinite;
 	--an-direction: normal;
 	--an-fill: forwards;
 
 	--filter-anim-start: hue-rotate(0deg);
 	--filter-anim-end: hue-rotate(360deg);
-
-	--bg1-display: none;
-	--bg2-display: block;
-	--blend-mode: screen;
-	--bg1-blend-mode: darken;
-	--bg2-blend-mode: soft-light;
 
 	/* --blend-mode: color-dodge; */
+	--blend-mode: screen;
 	/* --blend-mode: plus-lighter; */
+
+	--bg1-blend-mode: darken;
 	/* --bg2-blend-mode: color-burn; */
-	/* --bg2-blend-mode: difference; */
-	/* --bg2-blend-mode: hard-light; */
-
-	/* rainbow-shadows-n-dots 2 */
-	/*
-		--r-start: 255;
-	--g-start: 128;
-	--b-start: 0;
-	--o-start: 2;
-	--r-end: 255;
-	--g-end: 0;
-	--b-end: 128;
-	--o-end: 0;
-
-	--bg1: #333;
-	--bg2: rgba(96, 64, 192, 1);
-
-	--size-start: 50px;
-	--size-end: 2000px;
-	--border-start: 1.5rem;
-	--border-end: 10rem;
-	--border-style: dotted;
-
-	--outline-start: 0px;
-	--outline-end: 0px;
-	--outline-style: none;
-
-	--shadow-start: 4rem;
-	--shadow-end: 2rem;
-
-	--delay-start: 0s;
-	--delay-end: 2s;
-
-	--an-name: tumble;
-	--an-duration: 20s;
-	--an-timing: linear;
-	--an-delay: -2s;
-	--an-iterations: infinite;
-	--an-direction: normal;
-	--an-fill: forwards;
-
-	--filter-anim-start: hue-rotate(0deg);
-	--filter-anim-end: hue-rotate(360deg);
-	filter: blur(2px);
+	--bg2-blend-mode: soft-light;
 
 	--bg1-display: none;
 	--bg2-display: block;
-	--blend-mode: screen;
-	--bg1-blend-mode: darken;
-	--bg2-blend-mode: difference;
-	*/
 
-	/* rainbow-shadows-n-dots */
+	/* decent blend options */
 	/*
-  --r-start: 255;
-	--g-start: 128;
-	--b-start: 0;
-	--o-start: 10;
-	--r-end: 255;
-	--g-end: 0;
-	--b-end: 128;
-	--o-end: 0;
-
-	--bg1: #333;
-	--bg2: rgba(96, 64, 192, 1);
-
-	--size-start: 50px;
-	--size-end: 830px;
-
-	--border-start: 1rem;
-	--border-end: 0.25rem;
-	--border-style: dotted;
-
-	--outline-start: 0px;
-	--outline-end: 0px;
-	--outline-style: none;
-
-	--shadow-start: 2rem;
-	--shadow-end: 2rem;
-
-	--delay-start: 0s;
-	--delay-end: 2s;
-
-	--an-name: tumble;
-	--an-duration: 20s;
-	--an-timing: linear;
-	--an-delay: -2s;
-	--an-iterations: infinite;
-	--an-direction: normal;
-	--an-fill: forwards;
-
-	--filter-anim-start: hue-rotate(0deg);
-	--filter-anim-end: hue-rotate(360deg);
-
-	--bg1-display: none;
-	--bg2-display: block;
+  --blend-mode: color-burn;
+	--blend-mode: color-dodge;
+	--blend-mode: exclusion;
+	--blend-mode: difference;
+	--blend-mode: hard-light;
+	--blend-mode: multiply;
+	--blend-mode: plus-lighter;
 	--blend-mode: screen;
+	--blend-mode: soft-light;
+	--blend-mode: plus-lighter;
+
+	--bg1-blend-mode: none;
 	--bg1-blend-mode: darken;
-	--bg2-blend-mode: difference;
+
+	--bg2-blend-mode: overlay;
+	--bg2-blend-mode: saturation;
+	--bg2-blend-mode: soft-light;
   */
 
-	/* purple-gold-shiny (old preset) */
+	/* purple-gold-shiny */
 	/*
   	--ring-count: 40;
 
@@ -188,7 +109,7 @@
 	--bg2: rgba(233, 205, 57, 1);
   */
 
-	/* swirly (old preset)*/
+	/* Swirly */
 	/*
   --ring-count: 40;
   --r-increment: -5;
@@ -222,7 +143,6 @@
 
 body {
 	/* background-color: #00f; */
-	background-color: #000f;
 	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 	height: 100vh;
 	width: 100vw;
@@ -232,7 +152,6 @@ body {
 	align-items: center;
 	box-shadow: inset 0 0 20vw rgba(0, 0, 0, 0.75);
 	overflow: hidden;
-	transform-style: preserve-3d;
 }
 
 .wrapper {
@@ -242,6 +161,7 @@ body {
   max-width: 1000px;
   height: 90vh;
   width: 90vw;
+  flex: 1;
 
   background-color: #ddd;
   box-shadow: inset 0 0 3rem rgba(0, 0, 0, 1), 0 0 5rem rgba(0, 0, 0, 0.75);
@@ -251,17 +171,17 @@ body {
 	justify-content: center;
 	align-items: center;
 
-	/* perspective: 1500px; */
+	perspective: 800px;
 	transform-style: preserve-3d;
 }
 
 aside {
-	transform: rotateX(60deg) rotateZ(65deg) rotateY(-10deg) rotateX(-10deg);
+	transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg);
 
 	position: absolute;
-	/* border: 4px solid #0000; */
+	border: 4px solid #0000;
 	border-radius: 50%;
-	/* transform-style: preserve-3d; */
+	transform-style: preserve-3d;
 }
 
 aside.ring {
@@ -276,8 +196,6 @@ aside.ring {
 	--o-dif: calc(var(--o-end) - var(--o-start));
 	--size-dif: calc(var(--size-end) - var(--size-start));
 	--border-dif: calc(var(--border-end) - var(--border-start));
-	--outline-dif: calc(var(--outline-end) - var(--outline-start));
-	--shadow-dif: calc(var(--shadow-end) - var(--shadow-start));
 	--delay-dif: calc(var(--delay-end) - var(--delay-start));
 
 	/* --c-start: rgba(var(--r-start), var(--g-start), var(--b-start), var(--o-start)); */
@@ -291,55 +209,35 @@ aside.ring {
 	--o-increment: calc(var(--o-dif) / var(--ring-count-minus-1));
 	--size-increment: calc(var(--size-dif) / var(--ring-count-minus-1));
 	--border-increment: calc(var(--border-dif) / var(--ring-count-minus-1));
-	--outline-increment: calc(var(--outline-dif) / var(--ring-count-minus-1));
-	--shadow-increment: calc(var(--shadow-dif) / var(--ring-count-minus-1));
 	--delay-increment: calc(var(--delay-dif) / var(--ring-count-minus-1));
 
 	--r: calc(var(--r-start) + calc(var(--r-increment) * calc(var(--i) - 1)));
 	--g: calc(var(--g-start) + calc(var(--g-increment) * calc(var(--i) - 1)));
 	--b: calc(var(--b-start) + calc(var(--b-increment) * calc(var(--i) - 1)));
 	--o: calc(var(--o-start) + calc(var(--o-increment) * calc(var(--i) - 1)));
-	--c: rgba(var(--r), var(--g), var(--b), var(--o));
 	/* color: rgba(var(--r), var(--g), var(--b), var(--o)); */
-	--shadow-size: calc(var(--shadow-start) + calc(var(--shadow-increment) * calc(var(--i) - 1)));
-
-	box-shadow: 0px 0px var(--shadow-size) var(--c), inset 0px 0px var(--shadow-size) var(--c);
-	/* background-color: rgba(var(--r), var(--g), var(--b), 0.1); */
+	border-color: rgba(var(--r), var(--g), var(--b), var(--o));
+	/* background-color: rgba(var(--r), var(--g), var(--b), var(--o)); */
 
 	--size: calc(var(--size-start) + calc(var(--size-increment) * calc(var(--i) - 1)));
 	width: var(--size);
 	height: var(--size);
 
-	--border-w: calc(var(--border-start) + calc(var(--border-increment) * calc(var(--i) - 1)));
-	border-color: var(--c);
-	border-width: var(--border-w);
-	border-style: var(--border-style);
-
-	--outline-w: calc(var(--outline-start) + calc(var(--outline-increment) * calc(var(--i) - 1)));
-	outline-color: var(--c);
-	outline-width: var(--outline-w);
-	outline-style: var(--outline-style);
-
 	--delay: calc(var(--delay-start) + calc(var(--delay-increment) * calc(var(--i) - 1)));
 	animation-delay: var(--delay);
+
+	--border: calc(var(--border-start) + calc(var(--border-increment) * calc(var(--i) - 1)));
+	border-width: var(--border);
 
 	--an: var(--an-name) var(--an-duration) var(--an-timing) calc(var(--an-delay) + var(--delay)) var(--an-iterations) var(--an-direction) var(--an-fill);
 	animation-composition: add;
 	animation: var(--an);
 	mix-blend-mode: var(--blend-mode);
 
-	/* ##### editable properties below*/
+	/* ##### editable properties below. Removing anything here shouldn't break the code*/
 	animation-name: tumble, filter-universal;
-	animation-duration: var(--an-duration), calc(var(--delay-end) - var(--delay-start));
-	animation-timing-function: linear;
-	animation-delay: calc(var(--an-delay) + var(--delay));
-	filter: blur(2px);
-
-	/* ##### */
-	/* animation-name: randomRotation, ripple2, filter-universal, randomRotation; */
-	/* animation-duration: var(--an-duration), 1.5s, 5s, 20s; */
-	/* animation-timing-function: linear, cubic-bezier(0.445, 0.05, 0.55, 0.95), cubic-bezier(0.445, 0.05, 0.55, 0.95), linear; */
-	/* animation-delay: var(--an-delay), calc(var(--an-delay) + var(--delay)), calc(var(--an-delay) + var(--delay)), calc(var(--an-delay) + var(--delay)); */
+	animation-duration: var(--an-duration), 5s;
+	/* filter: hue-rotate(calc(var(--i) * 9deg)); */
 }
 
 div.blendtest {
@@ -349,7 +247,6 @@ div.blendtest {
 	top: 0;
 	left: 0;
 	background-color: #000f;
-	/* box-shadow: inset 0px 0px 20rem #000b; */
 }
 
 .blendtest.before {
@@ -432,27 +329,9 @@ div.blendtest {
 	}
 }
 
-@keyframes randomRotation {
-	0% {
-		transform: rotateX(0deg) rotateZ(0deg);
-	}
-	25% {
-		transform: rotateX(15deg) rotateZ(-10deg);
-	}
-	50% {
-		transform: rotateX(-10deg) rotateZ(20deg);
-	}
-	75% {
-		transform: rotateX(5deg) rotateZ(-15deg);
-	}
-	100% {
-		transform: rotateX(0deg) rotateZ(0deg);
-	}
-}
-
 @keyframes rotate {
 	0% {
-		transform: rotateY(0deg);
+		transform: unset;
 	}
 	100% {
 		transform: rotateY(360deg);
@@ -484,13 +363,13 @@ div.blendtest {
 		transform: translateZ(0px);
 	}
 	25% {
-		transform: translateZ(-50px);
+		transform: translateZ(-100px);
 	}
 	50% {
 		transform: translateZ(0px);
 	}
 	75% {
-		transform: translateZ(50px);
+		transform: translateZ(100px);
 	}
 	100% {
 		transform: translateZ(0px);
