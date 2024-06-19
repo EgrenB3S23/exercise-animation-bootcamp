@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Card flip</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <article>
-        <section class="front">Front</section>
-        <section class="back">Back</section>
-    </article>
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <article class="card instant-anim flipped">
+        <section class="face front" id="front">Front</section>
+        <section class="face back" id="back">Back</section>
+      </article>
+    </div>
+    <script>
+      const card = document.querySelector(".card");
+      card.addEventListener("click", (e2) => {
+        card.classList.remove("instant-anim");
+        card.classList.toggle("flipped");
+      });
+    </script>
+  </body>
 </html>

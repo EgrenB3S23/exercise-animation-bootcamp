@@ -32,34 +32,34 @@ main > * {
 }
 
 .s {
-  --hand-sec-height: 175px;
-  --hand-sec-width: 4px;
+  --hand-height: 175px;
+  --hand-width: 4px;
 
   background-color: #777;
-  border-left: var(--hand-sec-width) #777 solid;
-  border-radius: calc(var(--hand-sec-width) / 2);
+  border-left: var(--hand-width) #777 solid;
+  border-radius: calc(var(--hand-width) / 2);
   width: 0px;
-  height: var(--hand-sec-height);
-  top: calc(var(--face-radius) - var(--hand-sec-height));
+  height: var(--hand-height);
+  top: calc(var(--face-radius) - var(--hand-height));
   left: 50%;
-  margin-left: calc(0px - calc(var(--hand-sec-width) / 2));
+  margin-left: calc(0px - calc(var(--hand-width) / 2));
   transform-origin: bottom center;
 
   animation: spin 60s linear infinite;
 }
 
 .ms {
-  --hand-msec-height: 130px;
-  --hand-msec-width: 2px;
+  --hand-height: 130px;
+  --hand-width: 2px;
 
   background-color: red;
-  border-left: var(--hand-msec-width) red solid;
-  border-radius: calc(var(--hand-msec-width) / 2);
+  border-left: var(--hand-width) red solid;
+  border-radius: calc(var(--hand-width) / 2);
   width: 0px;
-  height: var(--hand-msec-height);
-  top: calc(var(--face-radius) - var(--hand-msec-height));
+  height: var(--hand-height);
+  top: calc(var(--face-radius) - var(--hand-height));
   left: 50%;
-  margin-left: calc(0px - calc(var(--hand-msec-width) / 2));
+  margin-left: calc(0px - calc(var(--hand-width) / 2));
   transform-origin: bottom center;
 
   animation: spin 1s linear infinite;
@@ -70,7 +70,6 @@ div.dot {
   width: 10px;
   height: 10px;
   top: calc(50% - 5px);
-  top: calc(calc(100% - 10px) / 2);
   left: calc(50% - 5px);
   border-radius: 50px;
 }

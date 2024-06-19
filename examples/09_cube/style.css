@@ -1,0 +1,173 @@
+:root {
+  --color-primary: 255;
+  --color-secondary: 0;
+  --color-tertiary: 0;
+
+  --translate-mult: 1;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #456;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper {
+  background-color: #eee;
+  height: 600px;
+  width: 800px;
+
+  perspective: 800px;
+  perspective-origin: 50% 0px;
+
+  display: flex;
+
+  box-shadow: 0 0 1.3rem rgba(0, 0, 0, 0.3);
+  border: 1px black solid;
+}
+
+.wrapper:hover {
+  .cube {
+    .side {
+      border: 100px rgba(255, 255, 255, 0) solid;
+      div {
+        color: rgba(0, 0, 0, 0);
+        font-size: 0;
+        transition: 0.25s 0s; /* text out */
+      }
+      transition: 0.5s 0.1s; /* borders out */
+    }
+    --color-primary: 0;
+    --color-secondary: 255;
+    --color-tertiary: 255;
+  }
+}
+
+.side .text {
+  transition: 0.5s 0.5s; /* text in */
+  text-align: center;
+  font-size: 2rem;
+  line-height: 200px;
+}
+
+.cube {
+  margin: auto;
+  width: 300px;
+  height: 300px;
+
+  position: relative;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: tumble 15s linear normal infinite;
+}
+
+.side {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+
+  color: rgba(34, 34, 34, 1);
+  outline: 2px rgba(0, 0, 0, 0.3) solid;
+
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.75);
+
+  transition: 0.75s 0s /* borders out */;
+}
+
+.side.front {
+  --r: var(--color-primary);
+  --g: var(--color-secondary);
+  --b: var(--color-tertiary);
+  background-color: rgba(var(--r), var(--g), var(--b), 0.3);
+  border: 0px rgba(calc(255 - var(--r)), calc(255 - var(--g)), calc(255 - var(--b)), 0.5) solid;
+
+  transform: translateZ(calc(100px * var(--translate-mult)));
+}
+
+.side.back {
+  --r: var(--color-primary);
+  --g: var(--color-secondary);
+  --b: var(--color-tertiary);
+  background-color: rgba(var(--r), var(--g), var(--b), 0.3);
+  border: 0px rgba(calc(255 - var(--r)), calc(255 - var(--g)), calc(255 - var(--b)), 0.5) solid;
+
+  transform: translateZ(calc(-100px * var(--translate-mult))) rotateY(180deg);
+}
+
+.side.top {
+  --b: var(--color-primary);
+  --r: var(--color-secondary);
+  --g: var(--color-tertiary);
+  background-color: rgba(var(--r), var(--g), var(--b), 0.3);
+  border: 0px rgba(calc(255 - var(--r)), calc(255 - var(--g)), calc(255 - var(--b)), 0.5) solid;
+
+  transform: translateY(calc(-100px * var(--translate-mult))) rotateX(90deg);
+}
+
+.side.bottom {
+  --b: var(--color-primary);
+  --r: var(--color-secondary);
+  --g: var(--color-tertiary);
+  background-color: rgba(var(--r), var(--g), var(--b), 0.3);
+  border: 0px rgba(calc(255 - var(--r)), calc(255 - var(--g)), calc(255 - var(--b)), 0.5) solid;
+
+  transform: translateY(calc(100px * var(--translate-mult))) rotateX(-90deg);
+}
+
+.side.left {
+  --g: var(--color-primary);
+  --b: var(--color-secondary);
+  --r: var(--color-tertiary);
+  background-color: rgba(var(--r), var(--g), var(--b), 0.3);
+  border: 0px rgba(calc(255 - var(--r)), calc(255 - var(--g)), calc(255 - var(--b)), 0.5) solid;
+
+  transform: translateX(calc(-100px * var(--translate-mult))) rotateY(-90deg);
+}
+
+.side.right {
+  --g: var(--color-primary);
+  --b: var(--color-secondary);
+  --r: var(--color-tertiary);
+  background-color: rgba(var(--r), var(--g), var(--b), 0.3);
+  border: 0px rgba(calc(255 - var(--r)), calc(255 - var(--g)), calc(255 - var(--b)), 0.5) solid;
+
+  transform: translateX(calc(100px * var(--translate-mult))) rotateY(90deg);
+}
+
+.side {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+h1 {
+  position: absolute;
+}
+
+@keyframes wiggle {
+  from {
+    transform: rotateY(-45deg);
+  }
+  to {
+    transform: rotateY(45deg);
+  }
+}
+
+@keyframes tumble {
+  0% {
+  }
+  100% {
+    transform: rotateX(1800deg) rotateY(1440deg) rotateZ(1080deg);
+  }
+}

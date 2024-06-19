@@ -1,33 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Organic animation</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <main>
-        <aside></aside>
-        <aside></aside>
-        <aside></aside>
-        <aside></aside>
-        <aside></aside>
-        <aside></aside>
-        <aside></aside>
-        <aside></aside>
-        <aside></aside>
-        <aside></aside>
-        <aside></aside>
-        <aside></aside>
-        <aside></aside>
-        <aside></aside>
-        <aside></aside>
-        <aside></aside>
-        <aside></aside>
-        <aside></aside>
-        <aside></aside>
-        <aside></aside>
+      <div class="wrapper">
+        <aside class="ring"></aside>
+        <aside class="ring"></aside>
+        <aside class="ring"></aside>
+        <aside class="ring"></aside>
+        <aside class="ring"></aside>
+        <aside class="ring"></aside>
+        <aside class="ring"></aside>
+        <aside class="ring"></aside>
+        <aside class="ring"></aside>
+        <aside class="ring"></aside>
+        <aside class="ring"></aside>
+        <aside class="ring"></aside>
+        <aside class="ring"></aside>
+        <aside class="ring"></aside>
+        <aside class="ring"></aside>
+        <aside class="ring"></aside>
+        <aside class="ring"></aside>
+        <aside class="ring"></aside>
+        <aside class="ring"></aside>
+        <aside class="ring"></aside>
+      </div>
     </main>
-</body>
+    <!-- I used this javascript to generate variation between rings at first, before i decided to try a css-only version -->
+    <!--  To use this:
+          1. remove all code in aside.ring{}, and 
+          2. "uncomment" <script> below. 
+		-->
+
+    <!-- 
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const rings = document.querySelectorAll("aside");
+        const delayStep = 0.1;
+
+        rings.forEach((ring, i) => {
+          const size = 200 - i * 10;
+          const size = i * 10;
+          
+          ring.style.width = `${size}px`;
+          ring.style.height = `${size}px`;
+          ring.style.animationDelay = `${i * delayStep}s`;
+        });
+      });
+    </script>
+ 		-->
+  </body>
 </html>

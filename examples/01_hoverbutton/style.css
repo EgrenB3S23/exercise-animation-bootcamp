@@ -55,8 +55,8 @@ up.hold {
   display: none;
 }
 
-.btn:hover,
-.btn:focus {
+.btn:hover
+/* ,.btn:focus */ {
   background-color: var(--color-hover);
   box-shadow: 0 0 4.4rem #000;
   scale: 2;
@@ -70,13 +70,11 @@ up.hold {
   }
 }
 
-.btn:active,
+/* .btn:active, */
 .btn:focus {
-  /*
-	div.norm {
-		display: none;
-	}
-	*/
+  div.norm {
+    display: none;
+  }
   div.hov {
     display: none;
   }

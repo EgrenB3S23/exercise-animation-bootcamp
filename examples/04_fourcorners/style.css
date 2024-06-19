@@ -47,7 +47,7 @@ aside {
 }
 
 aside.animating {
-  animation: square-move var(--anim-delay) linear infinite;
+  animation: square-move var(--anim-duration) linear infinite;
 }
 
 @keyframes square-move {
