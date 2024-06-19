@@ -19,10 +19,10 @@ För att trigga animeringen togglar du CSS-classen ```.open``` på en ```<nav>``
 
 ```html
 <script>
-    document.querySelector('nav')
-    .addEventListener('click', (e) => {
-        e.target.classList.toggle('open')
-    })
+        document.querySelector('.toggle')
+        .addEventListener('click', (e) => {
+                document.querySelector('nav').classList.toggle('open')
+        })
 </script>
 ```
 
